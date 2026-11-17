@@ -1,7 +1,7 @@
 // ── map ───────────────────────────────────────────────────────────────────────
 const map = L.map('map', { center:[20,0], zoom:2, zoomControl:true });
 L.maplibreGL({
-  style: 'https://api.maptiler.com/maps/dark/style.json?key=5miHE96oeLhxy700Wy9w',
+  style: 'https://api.maptiler.com/maps/01a17dd7-9b9f-7958-952b-29245fa7b0b6/style.json?key=5miHE96oeLhxy700Wy9w',
   attribution: '© <a href="https://www.maptiler.com/">MapTiler</a> © OpenStreetMap contributors'
 }).addTo(map);
 
