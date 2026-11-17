@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>BEACON TRACKER // ACCESS</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="box">
+  <h1>◈ BEACON TRACKER<span class="cursor">_</span></h1>
+  <div class="sub">// authorised access only</div>
+  <div class="err" id="err">ACCESS DENIED — invalid credentials</div>
+  <form method="POST" action="/login">
+    <label>Access Code</label>
+    <input type="password" name="password" autofocus autocomplete="off" placeholder="enter password"/>
+    <button type="submit">[ AUTHENTICATE ]</button>
+  </form>
+</div>
+<script>
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('err')) document.getElementById('err').classList.add('show');
+</script>
+</body>
+</html>
