@@ -1,8 +1,9 @@
 // ── map ───────────────────────────────────────────────────────────────────────
 const map = L.map('map', { center:[20,0], zoom:2, zoomControl:true });
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?api_key=cb1_5b41_1_5f69bf4f0a2aab21434aa744', {
   attribution:'© OpenStreetMap © CARTO', subdomains:'abcd', maxZoom:19
 }).addTo(map);
+
 
 function makeIcon(isNew) {
   return L.divIcon({
