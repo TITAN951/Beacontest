@@ -1,7 +1,8 @@
 // ── map ───────────────────────────────────────────────────────────────────────
 const map = L.map('map', { center:[20,0], zoom:2, zoomControl:true });
-L.tileLayer('https://api.maptiler.com/maps/01a17dd7-9b9f-7958-952b-29245fa7b0b6/?key=5miHE96oeLhxy700Wy9w#1.26/15.2/14.6}', {
-  attribution:'© Esri, © OpenStreetMap contributors', maxZoom:16
+L.tileLayer('https://api.maptiler.com/maps/dark/{z}/{x}/{y}.png?key=5miHE96oeLhxy700Wy9w#1.26/15.2/14.6}', {
+  attribution:'© <a href="https://www.maptiler.com/">MapTiler</a> © OpenStreetMap contributors',
+  maxZoom:22, maxNativeZoom:20
 }).addTo(map);
 
 
