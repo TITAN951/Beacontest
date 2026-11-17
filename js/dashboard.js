@@ -7,6 +7,7 @@ L.tileLayer('https://api.maptiler.com/maps/dark/{z}/{x}/{y}.png?key=5miHE96oeLhx
 
 
 
+
 function makeIcon(isNew) {
   return L.divIcon({
     className:'',
