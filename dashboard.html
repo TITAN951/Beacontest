@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BEACON TRACKER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+<div id="app">
+
+  <header id="header">
+    <div id="status-dot"></div>
+    <h1>◈ BEACON TRACKER</h1>
+    <div class="tag">LIVE</div>
+    <div class="header-right">
+      <div class="stat">
+        <span class="stat-label">Total Pings</span>
+        <span class="stat-value" id="total-count">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Unique Hosts</span>
+        <span class="stat-value" id="unique-hosts">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Last Seen</span>
+        <span class="stat-value" id="last-seen" style="font-size:11px">—</span>
+      </div>
+      <button class="hdr-btn danger" onclick="confirmClear()">[ CLEAR ALL ]</button>
+      <button class="hdr-btn logout" onclick="location.href='/logout'">[ LOGOUT ]</button>
+    </div>
+  </header>
+
+  <div id="map-wrap"><div id="map"></div></div>
+
+  <div id="sidebar">
+    <div class="panel-header">
+      Beacon Log <span id="ping-count">0 pings</span>
+    </div>
+    <div id="ping-list">
+      <div id="empty-state">
+        [ awaiting beacon transmissions ]<br>
+        <span style="font-size:9px;color:#2a3a2a">run beacon on target machine</span>
+      </div>
+    </div>
+
+    <div id="detail-panel">
+      <div class="detail-title">
+        <span>// selected ping detail</span>
+      </div>
+      <div id="detail-content" style="color:var(--text-dim);font-size:11px">
+        click a ping to inspect
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- confirm clear overlay -->
+<div id="confirm-overlay">
+  <div class="confirm-box">
+    <p>CLEAR ALL PING DATA?</p>
+    <div class="sub">this will permanently delete all pings, notes and cannot be undone</div>
+    <div class="confirm-btns">
+      <button class="btn-confirm" onclick="doClear()">[ CONFIRM ]</button>
+      <button class="btn-cancel" onclick="cancelClear()">[ CANCEL ]</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
