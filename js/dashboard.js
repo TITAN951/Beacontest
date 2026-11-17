@@ -1,16 +1,9 @@
 // ── map ───────────────────────────────────────────────────────────────────────
-const tiles = L.tileLayer('https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png', {
-  attribution:'© OpenStreetMap © CARTO', maxZoom:19
+const map = L.map('map', { center:[20,0], zoom:2, zoomControl:true });
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution:'© Esri, © OpenStreetMap contributors', maxZoom:16
 }).addTo(map);
-tiles.createTile = (coords, done) => {
-  const tile = document.createElement('img');
-  const url = tiles.getTileUrl(coords);
-  fetch(url, { headers: { Authorization: 'Bearer cb1_5b41_1_5f69bf4f0a2aab21434aa744' } })
-    .then(r => r.ok ? r.blob() : Promise.reject())
-    .then(b => { tile.src = URL.createObjectURL(b); done(null, tile); })
-    .catch(() => done('error', tile));
-  return tile;
-};
+
 
 
 function makeIcon(isNew) {
