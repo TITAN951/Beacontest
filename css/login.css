@@ -1,0 +1,15 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#080c0f;display:flex;align-items:center;justify-content:center;height:100vh;font-family:'Share Tech Mono',monospace;}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,.015) 2px,rgba(0,255,65,.015) 4px);pointer-events:none}
+.box{width:360px;border:1px solid #1a4a1a;background:#0d1318;padding:40px 36px;}
+h1{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;letter-spacing:.2em;color:#00ff41;text-shadow:0 0 20px rgba(0,255,65,.5);margin-bottom:6px}
+.sub{font-size:9px;color:#2a4a2a;letter-spacing:.15em;text-transform:uppercase;margin-bottom:32px}
+label{font-size:9px;color:#4a6a4a;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:6px}
+input{width:100%;background:#080c0f;border:1px solid #1a3a1a;color:#00ff41;font-family:'Share Tech Mono',monospace;font-size:13px;padding:10px 12px;outline:none;margin-bottom:20px}
+input:focus{border-color:#00aa2a}
+button{width:100%;background:transparent;border:1px solid #00aa2a;color:#00ff41;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.15em;padding:12px;cursor:pointer;text-transform:uppercase;transition:all .2s}
+button:hover{background:#0a2a0a}
+.err{color:#ff3131;font-size:11px;margin-bottom:16px;display:none}
+.err.show{display:block}
+.cursor{animation:blink 1s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
