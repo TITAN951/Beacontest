@@ -17,8 +17,9 @@ export async function makeToken(env) {
 }
 
 export async function onRequestGet() {
-  return Response.redirect(new URL("/login", "https://example.com").pathname === "/login" ? "/" : "/", 302);
+  return new Response(null, { status: 302, headers: { "Location": "/" } });
 }
+
 
 export async function onRequestPost(context) {
   const { request, env } = context;
